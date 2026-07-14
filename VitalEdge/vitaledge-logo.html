@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitalEdge Collective — Logo Design File</title>
+  <style>
+    /* ============================================================
+       VITALEDGE COLLECTIVE — LOGO DESIGN FILE
+       The Hidden Nine
+       ============================================================ */
+
+    /* ── Brand Tokens ─────────────────────────────────────────── */
+    :root {
+      --ve-black:    #050505;
+      --ve-gunmetal: #2B2B2B;
+      --ve-blue:     #00AEEF;
+      --ve-emerald:  #00C389;
+      --ve-gold:     #C7A15A;
+      --ve-white:    #F4F4F1;
+      --ve-mid:      #888884;
+
+      --page-bg:     #0A0A0A;
+      --grid-line:   rgba(255,255,255,0.04);
+      --label:       rgba(255,255,255,0.28);
+      --divider:     rgba(255,255,255,0.07);
+
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* ── Reset ────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--page-bg);
+      color: var(--ve-white);
+      font-family: var(--font);
+      font-size: 14px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+    /* ── Page Layout ──────────────────────────────────────────── */
+    .page-header {
+      padding: 48px 60px 32px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .page-header__label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--label);
+      margin-bottom: 6px;
+    }
+    .page-header__title {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--ve-white);
+      letter-spacing: 0.04em;
+    }
+    .page-header__sub {
+      font-size: 12px;
+      color: var(--label);
+      margin-top: 4px;
+      letter-spacing: 0.06em;
+    }
+
+    .section {
+      padding: 72px 60px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .section:last-child { border-bottom: none; }
+
+    .section__label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--label);
+      margin-bottom: 48px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section__label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--divider);
+    }
+
+    /* ── Logo Lockup Shared ───────────────────────────────────── */
+    .lockup-word {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--ve-white);
+      display: block;
+      margin-top: 20px;
+    }
+    .lockup-sub {
+      font-size: 7.5px;
+      font-weight: 400;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--ve-mid);
+      display: block;
+      margin-top: 5px;
+    }
+
+    /* ── Section 1: Primary (stacked) ────────────────────────── */
+    .primary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+    }
+    .lockup-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 48px;
+      min-height: 320px;
+    }
+    .lockup-panel--dark  { background: var(--ve-black); }
+    .lockup-panel--mid   { background: var(--ve-gunmetal); }
+    .lockup-panel--light { background: var(--ve-white); }
+    .lockup-panel--light .lockup-word { color: var(--ve-black); }
+    .lockup-panel--light .lockup-sub  { color: #666; }
+
+    .panel-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--label);
+      margin-top: 32px;
+      text-align: center;
+    }
+    .lockup-panel--light .panel-label { color: #aaa; }
+
+    /* ── Section 2: Horizontal lockup ────────────────────────── */
+    .horizontal-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .horiz-panel {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 44px 56px;
+    }
+    .horiz-panel--dark  { background: var(--ve-black); }
+    .horiz-panel--light { background: var(--ve-white); }
+
+    .horiz-wordmark {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .horiz-wordmark .lockup-word { margin-top: 0; text-align: left; }
+    .horiz-wordmark .lockup-sub  { text-align: left; margin-top: 4px; }
+    .horiz-panel--light .lockup-word { color: var(--ve-black); }
+    .horiz-panel--light .lockup-sub  { color: #888; }
+
+    .horiz-divider {
+      width: 1px;
+      height: 28px;
+      background: rgba(255,255,255,0.15);
+      margin-left: 4px;
+    }
+    .horiz-panel--light .horiz-divider { background: rgba(0,0,0,0.12); }
+
+    /* ── Section 3: Icon only ─────────────────────────────────── */
+    .icon-grid {
+      display: flex;
+      gap: 2px;
+      flex-wrap: wrap;
+    }
+    .icon-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      padding: 48px;
+      flex: 1;
+      min-width: 180px;
+    }
+    .icon-panel--dark    { background: var(--ve-black); }
+    .icon-panel--mid     { background: var(--ve-gunmetal); }
+    .icon-panel--light   { background: var(--ve-white); }
+    .icon-panel--blue    { background: var(--ve-blue); }
+
+    /* ── Section 4: Colour palette ───────────────────────────── */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .swatch {
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .swatch__chip {
+      height: 80px;
+      width: 100%;
+    }
+    .swatch__info {
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--divider);
+      border-top: none;
+    }
+    .swatch__name {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ve-white);
+      letter-spacing: 0.04em;
+    }
+    .swatch__hex {
+      font-size: 11px;
+      color: var(--label);
+      margin-top: 3px;
+      font-feature-settings: 'tnum';
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Section 5: Usage notes ───────────────────────────────── */
+    .usage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .usage-col h3 {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ve-white);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .usage-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .usage-col li {
+      font-size: 13px;
+      color: var(--label);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .usage-col li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--ve-blue);
+      font-size: 10px;
+      top: 2px;
+    }
+
+    /* ── Section 6: Export / SVG code ────────────────────────── */
+    .export-note {
+      font-size: 12px;
+      color: var(--label);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+    .export-box {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--divider);
+      border-radius: 4px;
+      padding: 24px;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--label);
+      white-space: pre;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    /* ── Responsive ───────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .section { padding: 48px 24px; }
+      .page-header { padding: 32px 24px 24px; }
+      .horiz-panel { padding: 32px 24px; }
+      .usage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <p class="page-header__label">Brand Identity System — Confidential</p>
+    <h1 class="page-header__title">VitalEdge Collective</h1>
+    <p class="page-header__sub">Logo Design File · The Hidden Nine · Version 1.0</p>
+  </header>
+
+  <!-- ===========================================================
+       SECTION 1 — PRIMARY STACKED LOCKUP
+  =========================================================== -->
+  <section class="section">
+    <p class="section__label">01 — Primary Lockup (Stacked)</p>
+
+    <div class="primary-grid">
+
+      <!-- Dark background -->
+      <div class="lockup-panel lockup-panel--dark">
+        <!--
+          THE HIDDEN NINE — Primary Mark
+          Nine facets arranged as a geometric V.
+          Facets 1–4: left arm descending
+          Facets 5–8: right arm ascending
+          Facet 9: the base notch — its negative space
+                   traces the loop of a "9" when read
+                   with the surrounding shards.
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="80" height="72" role="img" aria-label="VitalEdge Collective mark — The Hidden Nine">
+
+          <!-- ── Left arm: four facets ── -->
+
+          <!-- Facet 1: top-left outer face -->
+          <polygon points="8,4 22,4 18,16 6,12" fill="#F4F4F1"/>
+
+          <!-- Facet 2: left arm upper-inner -->
+          <polygon points="22,4 30,4 24,20 18,16" fill="#B8B8B5"/>
+
+          <!-- Facet 3: left arm mid -->
+          <polygon points="6,12 18,16 16,28 4,22" fill="#DDDDD9"/>
+
+          <!-- Facet 4: left arm lower — reaches toward centre base -->
+          <polygon points="18,16 24,20 22,36 16,28" fill="#F4F4F1" opacity="0.9"/>
+
+          <!-- ── Right arm: four facets ── -->
+
+          <!-- Facet 5: top-right outer face -->
+          <polygon points="72,4 58,4 62,16 74,12" fill="#F4F4F1"/>
+
+          <!-- Facet 6: right arm upper-inner -->
+          <polygon points="58,4 50,4 56,20 62,16" fill="#B8B8B5"/>
+
+          <!-- Facet 7: right arm mid -->
+          <polygon points="74,12 62,16 64,28 76,22" fill="#DDDDD9"/>
+
+          <!-- Facet 8: right arm lower — reaches toward centre base -->
+          <polygon points="62,16 56,20 58,36 64,28" fill="#F4F4F1" opacity="0.9"/>
+
+          <!-- ── Facet 9: the base notch (The Hidden Nine) ──
+               This central wedge sits at the base of the V.
+               Its upper boundary curves inward; the void above
+               it, framed by facets 4 and 8, reads as the bowl
+               of a "9" — visible when you know to look.
+          -->
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/>
+
+          <!--
+               Accent sliver — the "tail" of the 9.
+               A thin, slightly offset sliver at top-centre
+               reinforces the hidden numeral without announcing it.
+          -->
+          <polygon points="34,4 46,4 44,14 36,14" fill="#00AEEF" opacity="0.9"/>
+
+        </svg>
+
+        <span class="lockup-word">VITALEDGE</span>
+        <span class="lockup-sub">COLLECTIVE</span>
+        <p class="panel-label">On Black · Primary</p>
+      </div>
+
+      <!-- Gunmetal background -->
+      <div class="lockup-panel lockup-panel--mid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="80" height="72" aria-hidden="true">
+          <polygon points="8,4 22,4 18,16 6,12" fill="#F4F4F1"/>
+          <polygon points="22,4 30,4 24,20 18,16" fill="#B8B8B5"/>
+          <polygon points="6,12 18,16 16,28 4,22" fill="#DDDDD9"/>
+          <polygon points="18,16 24,20 22,36 16,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12" fill="#F4F4F1"/>
+          <polygon points="58,4 50,4 56,20 62,16" fill="#B8B8B5"/>
+          <polygon points="74,12 62,16 64,28 76,22" fill="#DDDDD9"/>
+          <polygon points="62,16 56,20 58,36 64,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/>
+          <polygon points="34,4 46,4 44,14 36,14" fill="#00AEEF" opacity="0.9"/>
+        </svg>
+        <span class="lockup-word">VITALEDGE</span>
+        <span class="lockup-sub">COLLECTIVE</span>
+        <p class="panel-label">On Gunmetal</p>
+      </div>
+
+      <!-- Light background -->
+      <div class="lockup-panel lockup-panel--light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="80" height="72" aria-hidden="true">
+          <!-- Inverted for light: dark facets -->
+          <polygon points="8,4 22,4 18,16 6,12" fill="#050505"/>
+          <polygon points="22,4 30,4 24,20 18,16" fill="#555"/>
+          <polygon points="6,12 18,16 16,28 4,22" fill="#333"/>
+          <polygon points="18,16 24,20 22,36 16,28" fill="#050505" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12" fill="#050505"/>
+          <polygon points="58,4 50,4 56,20 62,16" fill="#555"/>
+          <polygon points="74,12 62,16 64,28 76,22" fill="#333"/>
+          <polygon points="62,16 56,20 58,36 64,28" fill="#050505" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#050505"/>
+          <polygon points="34,4 46,4 44,14 36,14" fill="#0086B5" opacity="0.9"/>
+        </svg>
+        <span class="lockup-word">VITALEDGE</span>
+        <span class="lockup-sub">COLLECTIVE</span>
+        <p class="panel-label">On White · Reversed</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       SECTION 2 — HORIZONTAL LOCKUP
+  =========================================================== -->
+  <section class="section">
+    <p class="section__label">02 — Horizontal Lockup</p>
+
+    <div class="horizontal-wrap">
+
+      <!-- Dark -->
+      <div class="horiz-panel horiz-panel--dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="44" height="40" aria-hidden="true">
+          <polygon points="8,4 22,4 18,16 6,12" fill="#F4F4F1"/>
+          <polygon points="22,4 30,4 24,20 18,16" fill="#B8B8B5"/>
+          <polygon points="6,12 18,16 16,28 4,22" fill="#DDDDD9"/>
+          <polygon points="18,16 24,20 22,36 16,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12" fill="#F4F4F1"/>
+          <polygon points="58,4 50,4 56,20 62,16" fill="#B8B8B5"/>
+          <polygon points="74,12 62,16 64,28 76,22" fill="#DDDDD9"/>
+          <polygon points="62,16 56,20 58,36 64,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/>
+          <polygon points="34,4 46,4 44,14 36,14" fill="#00AEEF" opacity="0.9"/>
+        </svg>
+        <div class="horiz-divider"></div>
+        <div class="horiz-wordmark">
+          <span class="lockup-word">VITALEDGE</span>
+          <span class="lockup-sub">COLLECTIVE</span>
+        </div>
+      </div>
+
+      <!-- Light -->
+      <div class="horiz-panel horiz-panel--light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="44" height="40" aria-hidden="true">
+          <polygon points="8,4 22,4 18,16 6,12" fill="#050505"/>
+          <polygon points="22,4 30,4 24,20 18,16" fill="#555"/>
+          <polygon points="6,12 18,16 16,28 4,22" fill="#333"/>
+          <polygon points="18,16 24,20 22,36 16,28" fill="#050505" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12" fill="#050505"/>
+          <polygon points="58,4 50,4 56,20 62,16" fill="#555"/>
+          <polygon points="74,12 62,16 64,28 76,22" fill="#333"/>
+          <polygon points="62,16 56,20 58,36 64,28" fill="#050505" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#050505"/>
+          <polygon points="34,4 46,4 44,14 36,14" fill="#0086B5" opacity="0.9"/>
+        </svg>
+        <div class="horiz-divider"></div>
+        <div class="horiz-wordmark">
+          <span class="lockup-word">VITALEDGE</span>
+          <span class="lockup-sub">COLLECTIVE</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       SECTION 3 — ICON ONLY
+  =========================================================== -->
+  <section class="section">
+    <p class="section__label">03 — Icon / Mark Only</p>
+
+    <div class="icon-grid">
+
+      <!-- On black — large -->
+      <div class="icon-panel icon-panel--dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="96" height="86" aria-label="VitalEdge Collective mark">
+          <polygon points="8,4 22,4 18,16 6,12" fill="#F4F4F1"/>
+          <polygon points="22,4 30,4 24,20 18,16" fill="#B8B8B5"/>
+          <polygon points="6,12 18,16 16,28 4,22" fill="#DDDDD9"/>
+          <polygon points="18,16 24,20 22,36 16,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12" fill="#F4F4F1"/>
+          <polygon points="58,4 50,4 56,20 62,16" fill="#B8B8B5"/>
+          <polygon points="74,12 62,16 64,28 76,22" fill="#DDDDD9"/>
+          <polygon points="62,16 56,20 58,36 64,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/>
+          <polygon points="34,4 46,4 44,14 36,14" fill="#00AEEF" opacity="0.9"/>
+        </svg>
+        <p style="font-size:10px;letter-spacing:0.14em;color:var(--label);text-transform:uppercase;">On Black</p>
+      </div>
+
+      <!-- On gunmetal — medium -->
+      <div class="icon-panel icon-panel--mid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="64" height="58" aria-hidden="true">
+          <polygon points="8,4 22,4 18,16 6,12" fill="#F4F4F1"/>
+          <polygon points="22,4 30,4 24,20 18,16" fill="#B8B8B5"/>
+          <polygon points="6,12 18,16 16,28 4,22" fill="#DDDDD9"/>
+          <polygon points="18,16 24,20 22,36 16,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12" fill="#F4F4F1"/>
+          <polygon points="58,4 50,4 56,20 62,16" fill="#B8B8B5"/>
+          <polygon points="74,12 62,16 64,28 76,22" fill="#DDDDD9"/>
+          <polygon points="62,16 56,20 58,36 64,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/>
+          <polygon points="34,4 46,4 44,14 36,14" fill="#00AEEF" opacity="0.9"/>
+        </svg>
+        <p style="font-size:10px;letter-spacing:0.14em;color:var(--label);text-transform:uppercase;">On Gunmetal</p>
+      </div>
+
+      <!-- On white — reversed -->
+      <div class="icon-panel icon-panel--light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="64" height="58" aria-hidden="true">
+          <polygon points="8,4 22,4 18,16 6,12" fill="#050505"/>
+          <polygon points="22,4 30,4 24,20 18,16" fill="#555"/>
+          <polygon points="6,12 18,16 16,28 4,22" fill="#333"/>
+          <polygon points="18,16 24,20 22,36 16,28" fill="#050505" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12" fill="#050505"/>
+          <polygon points="58,4 50,4 56,20 62,16" fill="#555"/>
+          <polygon points="74,12 62,16 64,28 76,22" fill="#333"/>
+          <polygon points="62,16 56,20 58,36 64,28" fill="#050505" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#050505"/>
+          <polygon points="34,4 46,4 44,14 36,14" fill="#0086B5" opacity="0.9"/>
+        </svg>
+        <p style="font-size:10px;letter-spacing:0.14em;color:#aaa;text-transform:uppercase;">On White</p>
+      </div>
+
+      <!-- Accent: blue accent visible -->
+      <div class="icon-panel icon-panel--dark" style="position:relative;">
+        <!-- Accent version: top facet uses emerald -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="64" height="58" aria-hidden="true">
+          <polygon points="8,4 22,4 18,16 6,12" fill="#F4F4F1"/>
+          <polygon points="22,4 30,4 24,20 18,16" fill="#B8B8B5"/>
+          <polygon points="6,12 18,16 16,28 4,22" fill="#DDDDD9"/>
+          <polygon points="18,16 24,20 22,36 16,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12" fill="#F4F4F1"/>
+          <polygon points="58,4 50,4 56,20 62,16" fill="#B8B8B5"/>
+          <polygon points="74,12 62,16 64,28 76,22" fill="#DDDDD9"/>
+          <polygon points="62,16 56,20 58,36 64,28" fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/>
+          <!-- Accent: gold instead of blue -->
+          <polygon points="34,4 46,4 44,14 36,14" fill="#C7A15A" opacity="0.95"/>
+        </svg>
+        <p style="font-size:10px;letter-spacing:0.14em;color:var(--label);text-transform:uppercase;">Gold Accent</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       SECTION 4 — COLOUR PALETTE
+  =========================================================== -->
+  <section class="section">
+    <p class="section__label">04 — Colour Palette</p>
+
+    <div class="palette-grid">
+
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#050505;"></div>
+        <div class="swatch__info">
+          <p class="swatch__name">Matte Black</p>
+          <p class="swatch__hex">#050505</p>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#2B2B2B;"></div>
+        <div class="swatch__info">
+          <p class="swatch__name">Gunmetal</p>
+          <p class="swatch__hex">#2B2B2B</p>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#00AEEF;"></div>
+        <div class="swatch__info">
+          <p class="swatch__name">Electric Blue</p>
+          <p class="swatch__hex">#00AEEF</p>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#00C389;"></div>
+        <div class="swatch__info">
+          <p class="swatch__name">Emerald</p>
+          <p class="swatch__hex">#00C389</p>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#C7A15A;"></div>
+        <div class="swatch__info">
+          <p class="swatch__name">Deep Gold</p>
+          <p class="swatch__hex">#C7A15A</p>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#F4F4F1; border:1px solid rgba(255,255,255,0.08);"></div>
+        <div class="swatch__info">
+          <p class="swatch__name">Soft White</p>
+          <p class="swatch__hex">#F4F4F1</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       SECTION 5 — USAGE NOTES
+  =========================================================== -->
+  <section class="section">
+    <p class="section__label">05 — Usage Notes</p>
+
+    <div class="usage-grid">
+
+      <div class="usage-col">
+        <h3>Do</h3>
+        <ul>
+          <li>Use the mark primarily in Soft White (#F4F4F1) on dark backgrounds</li>
+          <li>Use the mark in Matte Black (#050505) on light backgrounds</li>
+          <li>Keep the Electric Blue accent on Facet 9's top sliver as the sole colour detail</li>
+          <li>Maintain wide letter-spacing in the wordmark at all times</li>
+          <li>Use "COLLECTIVE" in a noticeably smaller size than "VITALEDGE"</li>
+          <li>Allow generous clear space equal to the width of the mark around all lockups</li>
+          <li>Scale the SVG proportionally — never stretch or skew</li>
+          <li>Reserve accent colours (blue, emerald, gold) for single-facet highlights only</li>
+        </ul>
+      </div>
+
+      <div class="usage-col">
+        <h3>Do Not</h3>
+        <ul>
+          <li>Do not add drop shadows, bevels, emboss or any 3D effects</li>
+          <li>Do not use gradients across the full mark — flat facets only</li>
+          <li>Do not outline or stroke the mark</li>
+          <li>Do not place the mark on busy photographic backgrounds</li>
+          <li>Do not alter the geometry or proportion of any facet</li>
+          <li>Do not use more than one accent colour simultaneously</li>
+          <li>Do not compress letter-spacing in the wordmark</li>
+          <li>Do not use the wordmark alone without the mark in brand-primary contexts</li>
+          <li>Do not rotate or flip the mark</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       SECTION 6 — EXPORTABLE SVG CODE
+  =========================================================== -->
+  <section class="section">
+    <p class="section__label">06 — Exportable SVG Mark</p>
+    <p class="export-note">
+      Copy the SVG code below for use in web files, design tools, or embroidery artwork.
+      The viewBox is 80×72. Each polygon is individually labelled by facet number.
+      Replace fill values to adapt to different colourways.
+    </p>
+    <div class="export-box"><!-- VitalEdge Collective — The Hidden Nine Mark
+     viewBox: 0 0 80 72
+     Nine facets: left arm (1-4), right arm (5-8), base notch (9) + accent sliver
+-->
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72"
+     role="img" aria-label="VitalEdge Collective"&gt;
+
+  &lt;!-- Facet 1: top-left outer --&gt;
+  &lt;polygon points="8,4 22,4 18,16 6,12"      fill="#F4F4F1"/&gt;
+
+  &lt;!-- Facet 2: left arm upper-inner --&gt;
+  &lt;polygon points="22,4 30,4 24,20 18,16"    fill="#B8B8B5"/&gt;
+
+  &lt;!-- Facet 3: left arm mid --&gt;
+  &lt;polygon points="6,12 18,16 16,28 4,22"    fill="#DDDDD9"/&gt;
+
+  &lt;!-- Facet 4: left arm lower --&gt;
+  &lt;polygon points="18,16 24,20 22,36 16,28"  fill="#F4F4F1" opacity="0.9"/&gt;
+
+  &lt;!-- Facet 5: top-right outer --&gt;
+  &lt;polygon points="72,4 58,4 62,16 74,12"    fill="#F4F4F1"/&gt;
+
+  &lt;!-- Facet 6: right arm upper-inner --&gt;
+  &lt;polygon points="58,4 50,4 56,20 62,16"    fill="#B8B8B5"/&gt;
+
+  &lt;!-- Facet 7: right arm mid --&gt;
+  &lt;polygon points="74,12 62,16 64,28 76,22"  fill="#DDDDD9"/&gt;
+
+  &lt;!-- Facet 8: right arm lower --&gt;
+  &lt;polygon points="62,16 56,20 58,36 64,28"  fill="#F4F4F1" opacity="0.9"/&gt;
+
+  &lt;!-- Facet 9: base notch — The Hidden Nine --&gt;
+  &lt;polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/&gt;
+
+  &lt;!-- Accent sliver: top-centre (use blue, gold or emerald) --&gt;
+  &lt;polygon points="34,4 46,4 44,14 36,14"    fill="#00AEEF" opacity="0.9"/&gt;
+
+&lt;/svg&gt;</div>
+  </section>
+
+</body>
+</html>

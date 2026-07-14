@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VitalEdge Collective provides high-level strategic partnerships — connecting capability, capital and specialist networks across engineering, digital projects and IP licensing." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="VitalEdge Collective — Operating at the Edge of Opportunity" />
+  <meta property="og:description" content="VitalEdge Collective provides high-level strategic partnerships across engineering, relationships, digital projects and IP licensing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vitaledge-collective.com" />
+  <title>VitalEdge Collective</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="VitalEdge Collective Home">
+        <!-- VitalEdge Hidden Nine mark — inline SVG -->
+        <svg class="nav__logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="28" height="25" aria-hidden="true" focusable="false">
+          <polygon points="8,4 22,4 18,16 6,12"      fill="#F4F4F1"/>
+          <polygon points="22,4 30,4 24,20 18,16"    fill="#B8B8B5"/>
+          <polygon points="6,12 18,16 16,28 4,22"    fill="#DDDDD9"/>
+          <polygon points="18,16 24,20 22,36 16,28"  fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="72,4 58,4 62,16 74,12"    fill="#F4F4F1"/>
+          <polygon points="58,4 50,4 56,20 62,16"    fill="#B8B8B5"/>
+          <polygon points="74,12 62,16 64,28 76,22"  fill="#DDDDD9"/>
+          <polygon points="62,16 56,20 58,36 64,28"  fill="#F4F4F1" opacity="0.9"/>
+          <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/>
+          <polygon points="34,4 46,4 44,14 36,14"    fill="#00AEEF" opacity="0.9"/>
+        </svg>
+        <span class="nav__logo-text">VITALEDGE</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <!-- Mobile menu backdrop — tap outside to close -->
+      <div class="nav__backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+      <!--
+        nav__panel is the fixed full-screen overlay on mobile.
+        The close button and ul are siblings inside it — both valid children of a div.
+        On desktop this div is display:contents so layout is unchanged.
+      -->
+      <div class="nav__panel" id="navPanel">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&#x2715;</button>
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#sectors" class="nav__link">Sectors</a></li>
+          <li><a href="#philosophy" class="nav__link">Philosophy</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Hero">
+
+      <!-- Hero background image (placeholder — swap for final photography) -->
+      <div class="hero__bg" aria-hidden="true">
+<img class="hero__bg-photo" src="images/hero-photo.jpg" alt="" loading="eager" fetchpriority="high" width="2400" height="2446" />
+      <svg class="hero-bg-svg hero-network-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <g class="hero-network">
+    <line class="hero-line" style="--o:0.44" x1="872.4" y1="262.7" x2="974.4" y2="273.2" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.42" x1="872.4" y1="262.7" x2="850.6" y2="370.1" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.372" x1="872.4" y1="262.7" x2="995.2" y2="293.3" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.46" x1="872.4" y1="262.7" x2="959.6" y2="301.7" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.115" x1="1740.5" y1="226.9" x2="1847.2" y2="416.6" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.153" x1="974.4" y1="273.2" x2="1012.2" y2="72.6" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.639" x1="974.4" y1="273.2" x2="959.6" y2="301.7" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.307" x1="974.4" y1="273.2" x2="881.5" y2="155.7" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.439" x1="379.8" y1="244.5" x2="390.0" y2="141.9" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.502" x1="1199.0" y1="351.3" x2="1243.2" y2="283.9" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.278" x1="213.2" y1="165.3" x2="329.8" y2="55.7" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.226" x1="213.2" y1="165.3" x2="390.0" y2="141.9" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.355" x1="213.2" y1="165.3" x2="95.4" y2="226.3" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.643" x1="1847.2" y1="416.6" x2="1875.7" y2="428.4" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.433" x1="329.8" y1="55.7" x2="390.0" y2="141.9" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.104" x1="1012.2" y1="72.6" x2="995.2" y2="293.3" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.292" x1="1012.2" y1="72.6" x2="881.5" y2="155.7" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.366" x1="850.6" y1="370.1" x2="959.6" y2="301.7" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.627" x1="995.2" y1="293.3" x2="959.6" y2="301.7" stroke="url(#lineGrad)" stroke-width="1"/><line class="hero-line" style="--o:0.226" x1="995.2" y1="293.3" x2="881.5" y2="155.7" stroke="url(#lineGrad)" stroke-width="1"/>
+    <circle class="hero-node" style="--o:0.5" cx="872.4" cy="262.7" r="1.5" fill="#f0f0f0"/><circle class="hero-node" style="--o:0.45" cx="1740.5" cy="226.9" r="1.8" fill="#8b5cf6"/><circle class="hero-node" style="--o:0.85" cx="974.4" cy="273.2" r="2.4" fill="#f59e0b"/><circle class="hero-node" style="--o:0.61" cx="379.8" cy="244.5" r="1.3" fill="#8b5cf6"/><circle class="hero-node" style="--o:0.47" cx="1199.0" cy="351.3" r="2.4" fill="#3b82f6"/><circle class="hero-node" style="--o:0.55" cx="213.2" cy="165.3" r="1.5" fill="#f0f0f0"/><circle class="hero-node" style="--o:0.78" cx="206.8" cy="357.7" r="2.3" fill="#f59e0b"/><circle class="hero-node" style="--o:0.49" cx="1315.9" cy="65.9" r="1.8" fill="#3b82f6"/><circle class="hero-node" style="--o:0.46" cx="1847.2" cy="416.6" r="2.1" fill="#8b5cf6"/><circle class="hero-node" style="--o:0.5" cx="1243.2" cy="283.9" r="1.8" fill="#f0f0f0"/><circle class="hero-node" style="--o:0.8" cx="329.8" cy="55.7" r="2.1" fill="#8b5cf6"/><circle class="hero-node" style="--o:0.57" cx="1012.2" cy="72.6" r="1.5" fill="#8b5cf6"/><circle class="hero-node" style="--o:0.74" cx="390.0" cy="141.9" r="1.6" fill="#8b5cf6"/><circle class="hero-node" style="--o:0.72" cx="95.4" cy="226.3" r="1.5" fill="#8b5cf6"/><circle class="hero-node" style="--o:0.69" cx="850.6" cy="370.1" r="1.8" fill="#f0f0f0"/><circle class="hero-node" style="--o:0.49" cx="995.2" cy="293.3" r="1.8" fill="#3b82f6"/><circle class="hero-node" style="--o:0.55" cx="959.6" cy="301.7" r="2.0" fill="#f59e0b"/><circle class="hero-node" style="--o:0.62" cx="881.5" cy="155.7" r="2.2" fill="#f59e0b"/><circle class="hero-node" style="--o:0.57" cx="1875.7" cy="428.4" r="2.5" fill="#f0f0f0"/><circle class="hero-node" style="--o:0.5" cx="1586.0" cy="319.0" r="1.5" fill="#3b82f6"/>
+  </g>
+</svg>
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <!-- Animated canvas background -->
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <!-- Layered atmospheric gradients -->
+      <div class="hero__gradient hero__gradient--1" aria-hidden="true"></div>
+      <div class="hero__gradient hero__gradient--2" aria-hidden="true"></div>
+      <div class="hero__gradient hero__gradient--3" aria-hidden="true"></div>
+
+      <!-- Floating orbs -->
+      <div class="orb orb--1" aria-hidden="true"></div>
+      <div class="orb orb--2" aria-hidden="true"></div>
+      <div class="orb orb--3" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <div class="hero__eyebrow reveal">
+          <span class="eyebrow-line"></span>
+          <span>VitalEdge Collective</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h1 class="hero__headline reveal reveal--delay-1">
+          Operating at the<br />
+          Edge of <em>Opportunity.</em>
+        </h1>
+        <p class="hero__sub reveal reveal--delay-2">
+          VitalEdge Collective provides high-level strategic partnerships — connecting capability,
+          capital and specialist networks across engineering, digital projects and IP licensing.
+        </p>
+        <div class="hero__cta reveal reveal--delay-3">
+          <a href="#sectors" class="btn btn--ghost">Explore</a>
+          <a href="#contact" class="btn btn--primary">Start a Conversation</a>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="hero__scroll reveal reveal--delay-4" aria-hidden="true">
+          <span class="scroll-text">Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section class="about section" id="about" aria-label="About">
+      <div class="container">
+        <div class="about__grid">
+
+          <div class="about__left">
+            <div class="section-tag reveal">About VitalEdge</div>
+            <h2 class="section-heading reveal reveal--delay-1">
+              Not easily<br /><em>categorised.</em>
+            </h2>
+            <div class="about__accent-bar reveal reveal--delay-2" aria-hidden="true"></div>
+          </div>
+
+          <div class="about__right">
+            <p class="about__body reveal reveal--delay-1">
+              VitalEdge Collective is a private commercial vehicle. Our structure is deliberately
+              flexible — built to move across disciplines rather than within them. We do not define
+              ourselves by a single sector, product or service.
+            </p>
+            <p class="about__body reveal reveal--delay-2">
+              Where others see complexity, VitalEdge sees architecture. Where others see gaps,
+              we see opportunity. Our relationships are long-term. Our approach is selective.
+              Our involvement is purposeful.
+            </p>
+            <p class="about__body reveal reveal--delay-3">
+              The VitalEdge network operates where infrastructure meets intelligence — connecting
+              capability with capital, and people with possibility, quietly and with precision.
+            </p>
+            <div class="about__pillars reveal reveal--delay-4">
+              <div class="pillar">
+                <span class="pillar__icon" aria-hidden="true">◆</span>
+                <span>Strategic Relationships</span>
+              </div>
+              <div class="pillar">
+                <span class="pillar__icon" aria-hidden="true">◆</span>
+                <span>Commercial Intelligence</span>
+              </div>
+              <div class="pillar">
+                <span class="pillar__icon" aria-hidden="true">◆</span>
+                <span>Distribution Networks</span>
+              </div>
+              <div class="pillar">
+                <span class="pillar__icon" aria-hidden="true">◆</span>
+                <span>Opportunity Creation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Decorative line -->
+      <div class="section-divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================
+         SECTORS
+    ============================================================ -->
+    <section class="sectors section" id="sectors" aria-label="Sectors">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-tag">Where We Reach</div>
+          <h2 class="section-heading">Areas of<br /><em>Activity.</em></h2>
+          <p class="section-sub">
+            VitalEdge maintains active reach across a deliberately varied set of industries.
+          </p>
+        </div>
+
+        <div class="sectors-grid">
+
+          <!-- Sector 1: Medical -->
+          <article class="sector-card sector-card--blue reveal" data-delay="0">
+            <img class="sector-card__image" src="images/sectors/medical.svg" alt="Medical sector placeholder" loading="lazy" width="800" height="600" />
+            <div class="sector-card__overlay" aria-hidden="true"></div>
+            <div class="sector-card__content">
+              <span class="sector-card__eyebrow">Sector 01</span>
+              <h3 class="sector-card__title">Medical</h3>
+              <p class="sector-card__body">
+                Clinical partnerships, medical technology and healthcare ventures — where precision
+                and discretion matter most.
+              </p>
+            </div>
+          </article>
+
+          <!-- Sector 2: Sports -->
+          <article class="sector-card sector-card--gold reveal" data-delay="1">
+            <img class="sector-card__image" src="images/sectors/sports.svg" alt="Sports sector placeholder" loading="lazy" width="800" height="600" />
+            <div class="sector-card__overlay" aria-hidden="true"></div>
+            <div class="sector-card__content">
+              <span class="sector-card__eyebrow">Sector 02</span>
+              <h3 class="sector-card__title">Sports</h3>
+              <p class="sector-card__body">
+                Performance, talent and commercial infrastructure across professional and elite sport.
+              </p>
+            </div>
+          </article>
+
+          <!-- Sector 3: Health & Wellbeing -->
+          <article class="sector-card sector-card--emerald reveal" data-delay="2">
+            <img class="sector-card__image" src="images/sectors/wellbeing.svg" alt="Health and wellbeing sector placeholder" loading="lazy" width="800" height="600" />
+            <div class="sector-card__overlay" aria-hidden="true"></div>
+            <div class="sector-card__content">
+              <span class="sector-card__eyebrow">Sector 03</span>
+              <h3 class="sector-card__title">Health &amp; Wellbeing</h3>
+              <p class="sector-card__body">
+                Wellness ventures, consumer health products and the infrastructure behind everyday vitality.
+              </p>
+            </div>
+          </article>
+
+          <!-- Sector 4: App Development -->
+          <article class="sector-card sector-card--violet reveal" data-delay="3">
+            <img class="sector-card__image" src="images/sectors/app-development.svg" alt="App development sector placeholder" loading="lazy" width="800" height="600" />
+            <div class="sector-card__overlay" aria-hidden="true"></div>
+            <div class="sector-card__content">
+              <span class="sector-card__eyebrow">Sector 04</span>
+              <h3 class="sector-card__title">App Development</h3>
+              <p class="sector-card__body">
+                Proprietary digital products, platforms and applications — built, owned and commercialised.
+              </p>
+            </div>
+          </article>
+
+          <!-- Sector 5: Engineering -->
+          <article class="sector-card sector-card--blue reveal" data-delay="4">
+            <img class="sector-card__image" src="images/sectors/engineering.svg" alt="Engineering sector placeholder" loading="lazy" width="800" height="600" />
+            <div class="sector-card__overlay" aria-hidden="true"></div>
+            <div class="sector-card__content">
+              <span class="sector-card__eyebrow">Sector 05</span>
+              <h3 class="sector-card__title">Engineering</h3>
+              <p class="sector-card__body">
+                Infrastructure, technical systems and engineering-led ventures across established and
+                emerging industries.
+              </p>
+            </div>
+          </article>
+
+          <!-- Sector 6: Sales Generation & Partnership Facilitation -->
+          <article class="sector-card sector-card--violet reveal" data-delay="5">
+            <img class="sector-card__image" src="images/sectors/partnerships.svg" alt="Sales generation and partnership facilitation sector placeholder" loading="lazy" width="800" height="600" />
+            <div class="sector-card__overlay" aria-hidden="true"></div>
+            <div class="sector-card__content">
+              <span class="sector-card__eyebrow">Sector 06</span>
+              <h3 class="sector-card__title">Sales Generation &amp; Partnership Facilitation</h3>
+              <p class="sector-card__body">
+                Revenue pipelines, strategic introductions and partnership structures that convert
+                opportunity into outcome.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Decorative line -->
+      <div class="section-divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================
+         PHILOSOPHY
+    ============================================================ -->
+    <section class="philosophy section" id="philosophy" aria-label="Philosophy">
+      <div class="philosophy__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="philosophy__inner">
+          <div class="philosophy__left reveal">
+            <div class="section-tag">Our Approach</div>
+            <h2 class="section-heading philosophy__heading">
+              Built Around<br /><em>Opportunity.</em>
+            </h2>
+          </div>
+          <div class="philosophy__right">
+            <blockquote class="philosophy__quote reveal reveal--delay-1">
+              "VitalEdge seeks value in overlooked spaces — connecting capability, capital and
+              expertise where they can create meaningful outcomes."
+            </blockquote>
+            <p class="philosophy__body reveal reveal--delay-2">
+              The VitalEdge approach is not formulaic. We do not apply a fixed methodology to every
+              situation. We read the landscape, identify the moment, and move with precision.
+            </p>
+            <p class="philosophy__body reveal reveal--delay-3">
+              We are drawn to complexity that others avoid. The most significant commercial outcomes
+              rarely follow the most obvious paths — and VitalEdge is built for exactly that terrain.
+            </p>
+            <p class="philosophy__body reveal reveal--delay-4">
+              What VitalEdge Collective brings to every engagement is unchanged: intelligence,
+              discretion, and an architecture of relationships built over years.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NUMBERS
+    ============================================================ -->
+    <section class="numbers section" id="numbers" aria-label="Key Figures">
+      <div class="numbers__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">Scale &amp; Reach</div>
+          <h2 class="section-heading">By the<br /><em>Numbers.</em></h2>
+        </div>
+        <div class="numbers__grid">
+
+          <div class="stat reveal" data-delay="0">
+            <div class="stat__glow" aria-hidden="true"></div>
+            <div class="stat__number" data-target="10" data-suffix="+">0</div>
+            <div class="stat__label">Projects Facilitated</div>
+            <div class="stat__sub">Across multiple sectors and geographies</div>
+          </div>
+
+          <div class="stat reveal" data-delay="1">
+            <div class="stat__glow" aria-hidden="true"></div>
+            <div class="stat__number" data-target="5" data-suffix="">0</div>
+            <div class="stat__label">VitalEdge Digital Products</div>
+            <div class="stat__sub">Proprietary products in market or development</div>
+          </div>
+
+          <div class="stat reveal" data-delay="2">
+            <div class="stat__glow" aria-hidden="true"></div>
+            <div class="stat__number" data-target="8" data-suffix="">0</div>
+            <div class="stat__label">Industries</div>
+            <div class="stat__sub">Sectors where VitalEdge maintains active reach</div>
+          </div>
+
+          <div class="stat reveal" data-delay="3">
+            <div class="stat__glow" aria-hidden="true"></div>
+            <div class="stat__number" data-target="10" data-prefix="£" data-suffix="M+">0</div>
+            <div class="stat__label">Deals Secured</div>
+            <div class="stat__sub">Across strategic partnerships and commercial ventures</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="contact section" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="contact__grid">
+
+          <div class="contact__left reveal">
+            <div class="section-tag">Get in Touch</div>
+            <h2 class="section-heading">
+              Start a<br /><em>Conversation.</em>
+            </h2>
+            <p class="contact__intro">
+              VitalEdge Collective engages selectively. If you believe there is potential for
+              alignment with our work, we are open to a conversation.
+            </p>
+            <div class="contact__details">
+              <div class="contact__detail">
+                <span class="contact__detail-icon" aria-hidden="true">◈</span>
+                <span>Conversations are confidential by default.</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-icon" aria-hidden="true">◈</span>
+                <span>We respond to every genuine enquiry.</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-icon" aria-hidden="true">◈</span>
+                <span>No unsolicited commercial marketing.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__right reveal reveal--delay-2">
+            <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required autocomplete="name" />
+                </div>
+                <div class="form-field">
+                  <label for="company" class="form-label">Company</label>
+                  <input type="text" id="company" name="company" class="form-input" placeholder="Organisation" autocomplete="organization" />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" />
+              </div>
+              <div class="form-field">
+                <label for="interest" class="form-label">Area of Interest</label>
+                <div class="form-select-wrapper">
+                  <select id="interest" name="interest" class="form-select" required>
+                    <option value="" disabled selected>Select an area</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="introductions">Introductions</option>
+                    <option value="digital-ip">Digital Projects &amp; IP Licensing</option>
+                    <option value="partnerships">Partnerships</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span class="form-select-arrow" aria-hidden="true">▾</span>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your situation and what you're looking to achieve." rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                <span class="btn__text">Send Message</span>
+                <span class="btn__loader" aria-hidden="true"></span>
+              </button>
+              <div class="form-success" id="formSuccess" role="alert" aria-live="polite" hidden>
+                <span>◈</span> Your message has been received. We will be in touch.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top">
+      <div class="container">
+        <div class="footer__grid">
+
+          <!-- Brand -->
+          <div class="footer__brand">
+            <a href="#" class="nav__logo" aria-label="VitalEdge Collective Home">
+              <svg class="nav__logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 72" width="28" height="25" aria-hidden="true" focusable="false">
+                <polygon points="8,4 22,4 18,16 6,12"      fill="#F4F4F1"/>
+                <polygon points="22,4 30,4 24,20 18,16"    fill="#B8B8B5"/>
+                <polygon points="6,12 18,16 16,28 4,22"    fill="#DDDDD9"/>
+                <polygon points="18,16 24,20 22,36 16,28"  fill="#F4F4F1" opacity="0.9"/>
+                <polygon points="72,4 58,4 62,16 74,12"    fill="#F4F4F1"/>
+                <polygon points="58,4 50,4 56,20 62,16"    fill="#B8B8B5"/>
+                <polygon points="74,12 62,16 64,28 76,22"  fill="#DDDDD9"/>
+                <polygon points="62,16 56,20 58,36 64,28"  fill="#F4F4F1" opacity="0.9"/>
+                <polygon points="22,36 40,68 58,36 50,32 40,56 30,32" fill="#F4F4F1"/>
+                <polygon points="34,4 46,4 44,14 36,14"    fill="#00AEEF" opacity="0.9"/>
+              </svg>
+              <span class="nav__logo-text">VITALEDGE</span>
+            </a>
+            <p class="footer__brand-name">VitalEdge Collective</p>
+            <p class="footer__tagline">Operating at the edge of opportunity.</p>
+            <p class="footer__domain">
+              <a href="https://vitaledge-collective.com" target="_blank" rel="noopener">vitaledge-collective.com</a>
+            </p>
+          </div>
+
+          <!-- Site links -->
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <p class="footer__nav-heading">Navigate</p>
+            <ul role="list">
+              <li><a href="#about">About</a></li>
+              <li><a href="#sectors">Sectors</a></li>
+              <li><a href="#philosophy">Philosophy</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Legal links -->
+          <nav class="footer__nav" aria-label="Legal navigation">
+            <p class="footer__nav-heading">Legal</p>
+            <ul role="list">
+              <li><a href="#" id="privacyLink">Privacy Policy</a></li>
+              <li><a href="#" id="termsLink">Terms &amp; Conditions</a></li>
+              <li><a href="#" id="complianceLink">Compliance Statement</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Disclaimer band -->
+    <div class="footer__disclaimer">
+      <div class="container">
+        <p class="footer__disclaimer-text">
+          References to strategic partnerships, digital projects or IP licensing arrangements on this
+          website are for informational purposes only and do not constitute an offer, solicitation or
+          binding commitment. Any engagement is subject to separate agreement and due diligence.
+          Nothing on this website constitutes medical, healthcare, legal, financial or investment advice.
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright bar -->
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__copy">
+          &copy; <span id="year"></span> VitalEdge Collective. All rights reserved. Private &amp; Confidential.
+        </p>
+        <p class="footer__legal-note">
+          vitaledge-collective.com
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
